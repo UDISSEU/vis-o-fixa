@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visão Fixa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="welcome-overlay" id="welcome-overlay">
+  <div class="welcome-card">
+    <div class="welcome-icon">✓</div>
+    <h2>Bem-vindo, <span id="welcome-name"></span>!</h2>
+    <p>Seu painel está pronto.</p>
+  </div>
+</div>
+
+<header class="topo">
+  <h1>
+    <img src="https://img.icons8.com/ios-filled/50/2F6FED/bank-card-back-side.png">
+    Visão Fixa
+  </h1>
+  <p>Organize seus gastos pessoais de forma simples e visual</p>
+</header>
+
+<div class="profile-container">
+  <button type="button" class="profile-button" id="profile-button" aria-label="Abrir opções do perfil">
+    <span class="profile-dot" id="profile-dot">U</span>
+    <div class="profile-info">
+      <div class="profile-name" id="profile-user-name">Usuário</div>
+      <div class="profile-email" id="profile-user-email">email@exemplo.com</div>
+    </div>
+  </button>
+  <div class="profile-menu" id="profile-menu">
+    <button type="button" class="profile-menu-item" id="theme-toggle">
+      <span class="theme-label">Dark Mode</span>
+      <span class="menu-icon" id="theme-icon">🌙</span>
+    </button>
+    <button type="button" class="profile-menu-item logout-item" id="logout-button">
+      <span>Sair</span>
+      <span class="menu-icon">🚪</span>
+    </button>
+  </div>
+</div>
+
+<!-- TOTAL -->
+<section class="card-total">
+  <div>
+    <span>Total de Gastos</span>
+    <h2 id="total-geral">R$ 0.00</h2>
+  </div>
+
+  <img class="icone-dolar"
+  src="https://img.icons8.com/ios-filled/50/BFBFBF/us-dollar-circled--v2.png">
+</section>
+
+<!-- FORM -->
+<section class="formulario">
+  <h2>Adicionar Novo Gasto</h2>
+
+  <div class="linha">
+    <input type="text" id="nome" placeholder="Ex: Netflix">
+    <input type="number" id="valor" placeholder="0.00">
+  </div>
+
+  <select id="categoria">
+    <option>Assinaturas</option>
+    <option>Compras Online</option>
+    <option>Boletos</option>
+  </select>
+
+  <button onclick="adicionarGasto()">+ Adicionar Gasto</button>
+</section>
+
+<!-- CATEGORIAS -->
+<section class="categorias">
+
+  <div class="card-cat">
+    <h3>📺 Assinaturas</h3>
+    <span>Total</span>
+    <h2 id="assinaturas-total">R$ 0.00</h2>
+    <p id="assinaturas-msg">Nenhum gasto ainda</p>
+  </div>
+
+  <div class="card-cat">
+    <h3>🛒 Compras Online</h3>
+    <span>Total</span>
+    <h2 id="compras-total">R$ 0.00</h2>
+    <p id="compras-msg">Nenhum gasto ainda</p>
+  </div>
+
+  <div class="card-cat">
+    <h3>📄 Boletos</h3>
+    <span>Total</span>
+    <h2 id="boletos-total">R$ 0.00</h2>
+    <p id="boletos-msg">Nenhum gasto ainda</p>
+  </div>
+
+</section>
+
+
+<script src="script.js"></script>
+</body>
+</html>
