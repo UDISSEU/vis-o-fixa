@@ -481,6 +481,28 @@ button:hover {
     padding: 12px;
   }
 
+  .profile-container {
+    right: 10px;
+    top: 10px;
+  }
+
+  .profile-button {
+    min-width: unset;
+    max-width: 160px;
+    padding: 8px 10px;
+    gap: 10px;
+  }
+
+  .profile-dot {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .profile-info {
+    display: none;
+  }
+
   .formulario h2 {
     font-size: 18px;
   }
